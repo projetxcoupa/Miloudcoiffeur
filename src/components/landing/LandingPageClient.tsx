@@ -134,9 +134,17 @@ export function LandingPageClient() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <Badge className="bg-cyber-neon/20 text-cyber-neon border-cyber-neon/30 mb-6 px-4 py-1.5 text-sm uppercase tracking-widest font-bold">
-                                <span className="w-2 h-2 bg-cyber-neon rounded-full mr-2 inline-block animate-pulse" />
-                                {shop.isOpen ? 'Salon Ouvert' : 'Salon Fermé'}
+                            <Badge className={`mb-6 px-4 py-1.5 text-sm uppercase tracking-widest font-bold ${shop.status === 'open' ? 'bg-cyber-neon/20 text-cyber-neon border-cyber-neon/30' :
+                                    shop.status === 'break' ? 'bg-yellow-500/20 text-yellow-500 border-yellow-500/30' :
+                                        'bg-red-500/20 text-red-500 border-red-500/30'
+                                }`}>
+                                <span className={`w-2 h-2 rounded-full mr-2 inline-block animate-pulse ${shop.status === 'open' ? 'bg-cyber-neon' :
+                                        shop.status === 'break' ? 'bg-yellow-500' :
+                                            'bg-red-500'
+                                    }`} />
+                                {shop.status === 'open' ? 'Salon Ouvert' :
+                                    shop.status === 'break' ? 'En Pause' :
+                                        'Salon Fermé'}
                             </Badge>
                             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-8 leading-[0.9]">
                                 Dominez votre <br />

@@ -6,7 +6,7 @@ export interface Shop {
   plan: 'starter' | 'pro' | 'elite';
   address: string;
   phone: string;
-  isOpen: boolean;
+  status: 'open' | 'break' | 'closed';
   createdAt: Date;
 }
 
@@ -80,6 +80,7 @@ export interface Service {
   image?: string;
   isActive: boolean;
   color: string;
+  targetAge?: 'adult' | 'child' | 'both';
 }
 
 export interface Appointment {

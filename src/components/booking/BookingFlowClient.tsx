@@ -139,27 +139,34 @@ export function BookingFlowClient() {
                     <div className="space-y-6">
                         <h2 className="text-3xl font-black uppercase text-center mb-8">Choisissez vos <br /><span className="text-cyber-cyan">modules</span></h2>
                         <div className="space-y-3">
-                            {mockServices.filter(s => s.isActive).map(service => (
-                                <button
-                                    key={service.id}
-                                    onClick={() => {
-                                        const services = bookingData.selectedServices.includes(service.id)
-                                            ? bookingData.selectedServices.filter(id => id !== service.id)
-                                            : [...bookingData.selectedServices, service.id];
-                                        setBookingData({ ...bookingData, selectedServices: services });
-                                    }}
-                                    className={`w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all ${bookingData.selectedServices.includes(service.id) ? 'border-cyber-cyan bg-cyber-cyan/10' : 'border-white/5 bg-white/5'}`}
-                                >
-                                    <div className={`w-5 h-5 rounded flex items-center justify-center border-2 ${bookingData.selectedServices.includes(service.id) ? 'border-cyber-cyan bg-cyber-cyan' : 'border-white/20'}`}>
-                                        {bookingData.selectedServices.includes(service.id) && <Check className="w-4 h-4 text-cyber-dark" />}
-                                    </div>
-                                    <div className="text-left flex-1">
-                                        <p className="text-white font-bold">{service.name}</p>
-                                        <p className="text-[10px] text-white/40 uppercase tracking-widest">{service.duration} MIN</p>
-                                    </div>
-                                    <span className="text-xl font-black text-white">{service.price}€</span>
-                                </button>
-                            ))}
+                            {mockServices
+                                .filter(s => s.isActive)
+                                .filter(s => {
+                                    if (!bookingData.ageGroup) return true;
+                                    if (s.targetAge === 'both' || !s.targetAge) return true;
+                                    return s.targetAge === bookingData.ageGroup;
+                                })
+                                .map(service => (
+                                    <button
+                                        key={service.id}
+                                        onClick={() => {
+                                            const services = bookingData.selectedServices.includes(service.id)
+                                                ? bookingData.selectedServices.filter(id => id !== service.id)
+                                                : [...bookingData.selectedServices, service.id];
+                                            setBookingData({ ...bookingData, selectedServices: services });
+                                        }}
+                                        className={`w-full flex items-center gap-4 p-4 rounded-xl border-2 transition-all ${bookingData.selectedServices.includes(service.id) ? 'border-cyber-cyan bg-cyber-cyan/10' : 'border-white/5 bg-white/5'}`}
+                                    >
+                                        <div className={`w-5 h-5 rounded flex items-center justify-center border-2 ${bookingData.selectedServices.includes(service.id) ? 'border-cyber-cyan bg-cyber-cyan' : 'border-white/20'}`}>
+                                            {bookingData.selectedServices.includes(service.id) && <Check className="w-4 h-4 text-cyber-dark" />}
+                                        </div>
+                                        <div className="text-left flex-1">
+                                            <p className="text-white font-bold">{service.name}</p>
+                                            <p className="text-[10px] text-white/40 uppercase tracking-widest">{service.duration} MIN</p>
+                                        </div>
+                                        <span className="text-xl font-black text-white">{service.price}€</span>
+                                    </button>
+                                ))}
                         </div>
                     </div>
                 );

@@ -12,6 +12,8 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import { useRealtime } from '@/hooks/useRealtime';
+import type { Shop } from '@/types';
 import { toast } from 'sonner';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -36,6 +38,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const [notifications, setNotifications] = useState(3);
     const router = useRouter();
     const pathname = usePathname();
+
+    const shops = useRealtime<Shop>('shops', [mockShop as any]);
+    const shop = shops.find(s => s.id === 'shop_001') || mockShop;
 
     useEffect(() => {
         const checkMobile = () => {
@@ -201,15 +206,21 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                             {/* Shop Status */}
                             <Badge
                                 variant="outline"
-                                className={`hidden xs:flex ${mockShop.isOpen
-                                    ? 'border-cyber-neon/50 text-cyber-neon bg-cyber-neon/10'
-                                    : 'border-red-500/50 text-red-400 bg-red-500/10'
+                                className={`hidden xs:flex ${shop.status === 'open' ? 'border-cyber-neon/50 text-cyber-neon bg-cyber-neon/10' :
+                                    shop.status === 'break' ? 'border-yellow-500/50 text-yellow-500 bg-yellow-500/10' :
+                                        'border-red-500/50 text-red-400 bg-red-500/10'
                                     }`}
                             >
-                                <span className={`w-2 h-2 rounded-full mr-1 sm:mr-2 ${mockShop.isOpen ? 'bg-cyber-neon animate-pulse' : 'bg-red-400'
+                                <span className={`w-2 h-2 rounded-full mr-1 sm:mr-2 ${shop.status === 'open' ? 'bg-cyber-neon animate-pulse' :
+                                    shop.status === 'break' ? 'bg-yellow-500 animate-pulse' :
+                                        'bg-red-400'
                                     }`} />
-                                <span className="hidden sm:inline">{mockShop.isOpen ? 'Ouvert' : 'Fermé'}</span>
-                                <span className="sm:hidden">{mockShop.isOpen ? 'O' : 'F'}</span>
+                                <span className="hidden sm:inline">
+                                    {shop.status === 'open' ? 'Ouvert' : shop.status === 'break' ? 'En Pause' : 'Fermé'}
+                                </span>
+                                <span className="sm:hidden">
+                                    {shop.status === 'open' ? 'O' : shop.status === 'break' ? 'P' : 'F'}
+                                </span>
                             </Badge>
 
                             {/* Notifications */}

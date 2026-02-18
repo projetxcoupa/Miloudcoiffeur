@@ -1,0 +1,57 @@
+
+> my-app@0.0.0 test:e2e
+> playwright test --reporter=list
+
+
+Running 2 tests using 2 workers
+
+  Ô£ÿ  1 [chromium] ÔÇ║ tests\landing.spec.ts:3:1 ÔÇ║ landing page loads (15.4s)
+  Ô£ÿ  2 [chromium] ÔÇ║ tests\landing.spec.ts:9:1 ÔÇ║ navigation to booking flow (36.9s)
+
+
+  1) [chromium] ÔÇ║ tests\landing.spec.ts:3:1 ÔÇ║ landing page loads ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText(/Barber Shop Premium/i)
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText(/Barber Shop Premium/i)[22m
+
+
+      4 |     await page.goto('/');
+      5 |     await expect(page).toHaveTitle(/Miloud Coiffeur/);
+    > 6 |     await expect(page.getByText(/Barber Shop Premium/i)).toBeVisible();
+        |                                                          ^
+      7 | });
+      8 |
+      9 | test('navigation to booking flow', async ({ page }) => {
+        at C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\tests\landing.spec.ts:6:58
+
+    Error Context: test-results\landing-landing-page-loads-chromium\error-context.md
+
+  2) [chromium] ÔÇ║ tests\landing.spec.ts:9:1 ÔÇ║ navigation to booking flow ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('button', { name: /r├®server/i }).first()[22m
+
+
+      10 |     await page.goto('/');
+      11 |     const reserveBtn = page.getByRole('button', { name: /r├®server/i }).first();
+    > 12 |     await reserveBtn.click();
+         |                      ^
+      13 |     await expect(page).toHaveURL(/\/book/);
+      14 | });
+      15 |
+        at C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\tests\landing.spec.ts:12:22
+
+  2 failed
+    [chromium] ÔÇ║ tests\landing.spec.ts:3:1 ÔÇ║ landing page loads ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+    [chromium] ÔÇ║ tests\landing.spec.ts:9:1 ÔÇ║ navigation to booking flow ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ

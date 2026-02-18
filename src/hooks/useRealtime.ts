@@ -8,9 +8,6 @@ export function useRealtime<T extends { id: string }>(
 ) {
     const [data, setData] = useState<T[]>(initialData);
 
-    useEffect(() => {
-        setData(initialData);
-    }, [initialData]);
 
     useEffect(() => {
         const channel = supabase

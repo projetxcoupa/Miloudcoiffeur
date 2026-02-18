@@ -12,7 +12,7 @@ export const mockShop: Shop = {
   plan: 'pro',
   address: '123 Rue de la Barbe, Paris',
   phone: '+33 1 23 45 67 89',
-  isOpen: true,
+  status: 'open',
   createdAt: new Date('2023-01-15'),
 };
 
@@ -122,6 +122,7 @@ export const mockServices: Service[] = [
     image: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=400',
     isActive: true,
     color: '#00FF9C',
+    targetAge: 'adult',
   },
   {
     id: 'service_002',
@@ -134,6 +135,7 @@ export const mockServices: Service[] = [
     image: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400',
     isActive: true,
     color: '#00D4FF',
+    targetAge: 'adult',
   },
   {
     id: 'service_003',
@@ -146,6 +148,7 @@ export const mockServices: Service[] = [
     image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400',
     isActive: true,
     color: '#FF4D00',
+    targetAge: 'adult',
   },
   {
     id: 'service_004',
@@ -158,6 +161,7 @@ export const mockServices: Service[] = [
     image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400',
     isActive: true,
     color: '#8B5CF6',
+    targetAge: 'adult',
   },
   {
     id: 'service_005',
@@ -182,6 +186,20 @@ export const mockServices: Service[] = [
     image: 'https://images.unsplash.com/photo-1560869713-bf09f9c978de?w=400',
     isActive: true,
     color: '#10B981',
+    targetAge: 'both',
+  },
+  {
+    id: 'service_007',
+    shopId: 'shop_001',
+    name: 'Coupe Enfant',
+    description: 'Style adapté pour les moins de 12 ans',
+    price: 15,
+    duration: 25,
+    category: 'Coupe',
+    image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400',
+    isActive: true,
+    color: '#F472B6',
+    targetAge: 'child',
   },
 ];
 
