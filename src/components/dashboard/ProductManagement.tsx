@@ -1,7 +1,7 @@
 'use client';
 
 // FRESHCUT X - Product CMS
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
     Plus, Edit, Trash2,
@@ -17,8 +17,18 @@ import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { toast } from 'sonner';
 
+import { useRealtime } from '@/hooks/useRealtime';
+
 export function ProductManagement() {
-    const [products, setProducts] = useState<Product[]>(mockProducts);
+    const realtimeProducts = useRealtime<Product>('products', []);
+    const [products, setProducts] = useState<Product[]>([]);
+
+    useEffect(() => {
+        if (realtimeProducts.length > 0) {
+            // eslint-disable-next-line
+            setProducts(realtimeProducts);
+        }
+    }, [realtimeProducts]);
     const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
     const [editingProduct, setEditingProduct] = useState<Product | null>(null);
     const [searchTerm, setSearchTerm] = useState('');

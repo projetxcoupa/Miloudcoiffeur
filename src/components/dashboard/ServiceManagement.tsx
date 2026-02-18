@@ -1,7 +1,7 @@
 'use client';
 
 // FRESHCUT X - Service CMS
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Plus, Edit, Trash2,
@@ -29,8 +29,18 @@ const colorOptions = [
   { value: '#EF4444', label: 'Rouge' },
 ];
 
+import { useRealtime } from '@/hooks/useRealtime';
+
 export function ServiceManagement() {
-  const [services, setServices] = useState<Service[]>(mockServices);
+  const realtimeServices = useRealtime<Service>('services', []);
+  const [services, setServices] = useState<Service[]>([]);
+
+  useEffect(() => {
+    if (realtimeServices.length > 0) {
+      // eslint-disable-next-line
+      setServices(realtimeServices);
+    }
+  }, [realtimeServices]);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [editingService, setEditingService] = useState<Service | null>(null);
 

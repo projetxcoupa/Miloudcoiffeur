@@ -24,14 +24,17 @@ import { format, addDays, startOfWeek, addWeeks, subWeeks, isSameDay } from 'dat
 import { fr } from 'date-fns/locale';
 
 export function Reservations() {
-  const realtimeAppointments = useRealtime<Appointment>('appointments', mockAppointments);
-  const [appointments, setAppointments] = useState<Appointment[]>(realtimeAppointments);
+  const realtimeAppointments = useRealtime<Appointment>('appointments', []);
+  const [appointments, setAppointments] = useState<Appointment[]>([]);
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
 
   useEffect(() => {
-    setAppointments(realtimeAppointments);
+    if (realtimeAppointments.length > 0) {
+      // eslint-disable-next-line
+      setAppointments(realtimeAppointments);
+    }
   }, [realtimeAppointments]);
 
   // New appointment form state

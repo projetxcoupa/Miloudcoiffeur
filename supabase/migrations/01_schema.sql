@@ -4,7 +4,20 @@
 -- 1. Enable Extensions
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
--- 2. Create Types/Enums
+-- 2. Drop existing tables to allow clean reload
+DROP TABLE IF EXISTS "queueServices" CASCADE;
+DROP TABLE IF EXISTS "appointmentServices" CASCADE;
+DROP TABLE IF EXISTS "queueItems" CASCADE;
+DROP TABLE IF EXISTS "promotions" CASCADE;
+DROP TABLE IF EXISTS "products" CASCADE;
+DROP TABLE IF EXISTS "appointments" CASCADE;
+DROP TABLE IF EXISTS "services" CASCADE;
+DROP TABLE IF EXISTS "clients" CASCADE;
+DROP TABLE IF EXISTS "barbers" CASCADE;
+DROP TABLE IF EXISTS "users" CASCADE;
+DROP TABLE IF EXISTS "shops" CASCADE;
+
+-- 3. Create Types/Enums
 DO $$ BEGIN
     CREATE TYPE shop_plan AS ENUM ('starter', 'pro', 'elite');
     CREATE TYPE user_role AS ENUM ('super_admin', 'manager', 'barber');
@@ -16,11 +29,11 @@ EXCEPTION
     WHEN duplicate_object THEN null;
 END $$;
 
--- 3. Tables
+-- 4. Tables
 
 -- Shops
 CREATE TABLE IF NOT EXISTS "shops" (
-    "id" UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    "id" TEXT PRIMARY KEY DEFAULT uuid_generate_v4()::text,
     "name" TEXT NOT NULL,
     "plan" shop_plan DEFAULT 'pro',
     "address" TEXT,
@@ -31,8 +44,8 @@ CREATE TABLE IF NOT EXISTS "shops" (
 
 -- Users (Internal Staff)
 CREATE TABLE IF NOT EXISTS "users" (
-    "id" UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    "shopId" UUID REFERENCES "shops"("id") ON DELETE CASCADE,
+    "id" TEXT PRIMARY KEY DEFAULT uuid_generate_v4()::text,
+    "shopId" TEXT REFERENCES "shops"("id") ON DELETE CASCADE,
     "name" TEXT NOT NULL,
     "email" TEXT UNIQUE NOT NULL,
     "role" user_role DEFAULT 'barber',
@@ -43,8 +56,8 @@ CREATE TABLE IF NOT EXISTS "users" (
 
 -- Barbers
 CREATE TABLE IF NOT EXISTS "barbers" (
-    "id" UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    "shopId" UUID REFERENCES "shops"("id") ON DELETE CASCADE,
+    "id" TEXT PRIMARY KEY DEFAULT uuid_generate_v4()::text,
+    "shopId" TEXT REFERENCES "shops"("id") ON DELETE CASCADE,
     "name" TEXT NOT NULL,
     "avatar" TEXT,
     "status" barber_status DEFAULT 'off',
@@ -57,8 +70,8 @@ CREATE TABLE IF NOT EXISTS "barbers" (
 
 -- Clients
 CREATE TABLE IF NOT EXISTS "clients" (
-    "id" UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    "shopId" UUID REFERENCES "shops"("id") ON DELETE CASCADE,
+    "id" TEXT PRIMARY KEY DEFAULT uuid_generate_v4()::text,
+    "shopId" TEXT REFERENCES "shops"("id") ON DELETE CASCADE,
     "name" TEXT NOT NULL,
     "phone" TEXT NOT NULL,
     "email" TEXT,
@@ -76,24 +89,25 @@ CREATE TABLE IF NOT EXISTS "clients" (
 
 -- Services
 CREATE TABLE IF NOT EXISTS "services" (
-    "id" UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    "shopId" UUID REFERENCES "shops"("id") ON DELETE CASCADE,
+    "id" TEXT PRIMARY KEY DEFAULT uuid_generate_v4()::text,
+    "shopId" TEXT REFERENCES "shops"("id") ON DELETE CASCADE,
     "name" TEXT NOT NULL,
     "description" TEXT,
     "price" DECIMAL(10,2) NOT NULL,
     "duration" INTEGER NOT NULL, 
     "category" TEXT,
     "color" TEXT DEFAULT '#00FF9C',
+    "targetAge" TEXT DEFAULT 'adult',
     "isActive" BOOLEAN DEFAULT true,
     "createdAt" TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
 -- Appointments
 CREATE TABLE IF NOT EXISTS "appointments" (
-    "id" UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    "shopId" UUID REFERENCES "shops"("id") ON DELETE CASCADE,
-    "clientId" UUID REFERENCES "clients"("id") ON DELETE CASCADE,
-    "barberId" UUID REFERENCES "barbers"("id") ON DELETE SET NULL,
+    "id" TEXT PRIMARY KEY DEFAULT uuid_generate_v4()::text,
+    "shopId" TEXT REFERENCES "shops"("id") ON DELETE CASCADE,
+    "clientId" TEXT REFERENCES "clients"("id") ON DELETE CASCADE,
+    "barberId" TEXT REFERENCES "barbers"("id") ON DELETE SET NULL,
     "startTime" TIMESTAMP WITH TIME ZONE NOT NULL,
     "endTime" TIMESTAMP WITH TIME ZONE NOT NULL,
     "status" appointment_status DEFAULT 'scheduled',
@@ -104,12 +118,41 @@ CREATE TABLE IF NOT EXISTS "appointments" (
     "createdAt" TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
+-- Products
+CREATE TABLE IF NOT EXISTS "products" (
+    "id" TEXT PRIMARY KEY DEFAULT uuid_generate_v4()::text,
+    "shopId" TEXT REFERENCES "shops"("id") ON DELETE CASCADE,
+    "name" TEXT NOT NULL,
+    "description" TEXT,
+    "price" DECIMAL(10,2) NOT NULL,
+    "stock" INTEGER DEFAULT 0,
+    "category" TEXT,
+    "image" TEXT,
+    "isActive" BOOLEAN DEFAULT true,
+    "createdAt" TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+-- Promotions
+CREATE TABLE IF NOT EXISTS "promotions" (
+    "id" TEXT PRIMARY KEY DEFAULT uuid_generate_v4()::text,
+    "shopId" TEXT REFERENCES "shops"("id") ON DELETE CASCADE,
+    "name" TEXT NOT NULL,
+    "description" TEXT,
+    "discountType" TEXT NOT NULL, -- 'percentage' or 'fixed'
+    "discountValue" DECIMAL(10,2) NOT NULL,
+    "startDate" TIMESTAMP WITH TIME ZONE NOT NULL,
+    "endDate" TIMESTAMP WITH TIME ZONE NOT NULL,
+    "usageCount" INTEGER DEFAULT 0,
+    "isActive" BOOLEAN DEFAULT true,
+    "createdAt" TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
 -- Queue Items
 CREATE TABLE IF NOT EXISTS "queueItems" (
-    "id" UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    "shopId" UUID REFERENCES "shops"("id") ON DELETE CASCADE,
-    "clientId" UUID REFERENCES "clients"("id") ON DELETE CASCADE,
-    "barberId" UUID REFERENCES "barbers"("id") ON DELETE SET NULL,
+    "id" TEXT PRIMARY KEY DEFAULT uuid_generate_v4()::text,
+    "shopId" TEXT REFERENCES "shops"("id") ON DELETE CASCADE,
+    "clientId" TEXT REFERENCES "clients"("id") ON DELETE CASCADE,
+    "barberId" TEXT REFERENCES "barbers"("id") ON DELETE SET NULL,
     "position" INTEGER NOT NULL,
     "status" queue_status DEFAULT 'waiting',
     "estimatedWaitTime" INTEGER DEFAULT 0,
@@ -121,14 +164,14 @@ CREATE TABLE IF NOT EXISTS "queueItems" (
 
 -- Many-to-Many
 CREATE TABLE IF NOT EXISTS "appointmentServices" (
-    "appointmentId" UUID REFERENCES "appointments"("id") ON DELETE CASCADE,
-    "serviceId" UUID REFERENCES "services"("id") ON DELETE CASCADE,
+    "appointmentId" TEXT REFERENCES "appointments"("id") ON DELETE CASCADE,
+    "serviceId" TEXT REFERENCES "services"("id") ON DELETE CASCADE,
     PRIMARY KEY ("appointmentId", "serviceId")
 );
 
 CREATE TABLE IF NOT EXISTS "queueServices" (
-    "queueId" UUID REFERENCES "queueItems"("id") ON DELETE CASCADE,
-    "serviceId" UUID REFERENCES "services"("id") ON DELETE CASCADE,
+    "queueId" TEXT REFERENCES "queueItems"("id") ON DELETE CASCADE,
+    "serviceId" TEXT REFERENCES "services"("id") ON DELETE CASCADE,
     PRIMARY KEY ("queueId", "serviceId")
 );
 
@@ -150,6 +193,8 @@ ALTER TABLE "clients" ENABLE ROW LEVEL SECURITY;
 ALTER TABLE "services" ENABLE ROW LEVEL SECURITY;
 ALTER TABLE "appointments" ENABLE ROW LEVEL SECURITY;
 ALTER TABLE "queueItems" ENABLE ROW LEVEL SECURITY;
+ALTER TABLE "products" ENABLE ROW LEVEL SECURITY;
+ALTER TABLE "promotions" ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Allow all for authenticated users" ON "queueItems" FOR ALL TO authenticated USING (true);
 CREATE POLICY "Allow all for authenticated users" ON "appointments" FOR ALL TO authenticated USING (true);

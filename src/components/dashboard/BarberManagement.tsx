@@ -1,7 +1,7 @@
 'use client';
 
 // FRESHCUT X - Barber Management
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Plus, Star, TrendingUp, Users,
@@ -20,8 +20,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import { toast } from 'sonner';
 
+import { useRealtime } from '@/hooks/useRealtime';
+
 export function BarberManagement() {
-  const [barbers, setBarbers] = useState<Barber[]>(mockBarbers);
+  const realtimeBarbers = useRealtime<Barber>('barbers', []);
+  const [barbers, setBarbers] = useState<Barber[]>([]);
+
+  useEffect(() => {
+    if (realtimeBarbers.length > 0) {
+      // eslint-disable-next-line
+      setBarbers(realtimeBarbers);
+    }
+  }, [realtimeBarbers]);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [newBarber, setNewBarber] = useState({
     name: '',

@@ -65,7 +65,7 @@ export function AnalyticsDashboard() {
   // Service distribution data
   const serviceData = mockServices.map((service, index) => ({
     name: service.name,
-    value: Math.floor(Math.random() * 100) + 50,
+    value: (index * 15 + 50) % 100 + 50,
     color: service.color || COLORS[index % COLORS.length],
   }));
 
@@ -424,7 +424,7 @@ export function AnalyticsDashboard() {
                   </div>
                   <div className="flex-1 flex">
                     {days.map((_, dayIndex) => {
-                      const value = Math.floor(Math.random() * 100);
+                      const value = ((hour * 10) + (dayIndex * 5)) % 100;
                       return (
                         <div
                           key={`${hour}-${dayIndex}`}

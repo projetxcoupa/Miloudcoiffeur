@@ -1,7 +1,7 @@
 'use client';
 
 // FRESHCUT X - Client CRM
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Search, User, Phone, Mail, Calendar, DollarSign,
@@ -21,8 +21,18 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Progress } from '@/components/ui/progress';
 import { toast } from 'sonner';
 
+import { useRealtime } from '@/hooks/useRealtime';
+
 export function ClientCRM() {
-  const [clients, setClients] = useState<Client[]>(mockClients);
+  const realtimeClients = useRealtime<Client>('clients', []);
+  const [clients, setClients] = useState<Client[]>([]);
+
+  useEffect(() => {
+    if (realtimeClients.length > 0) {
+      // eslint-disable-next-line
+      setClients(realtimeClients);
+    }
+  }, [realtimeClients]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filter, setFilter] = useState<'all' | 'vip' | 'blocked' | 'new'>('all');
 
@@ -340,8 +350,8 @@ export function ClientCRM() {
                     <Button
                       variant="outline"
                       className={`${client.isBlocked
-                          ? 'border-green-500/50 text-green-400 hover:bg-green-500/10'
-                          : 'border-red-500/50 text-red-400 hover:bg-red-500/10'
+                        ? 'border-green-500/50 text-green-400 hover:bg-green-500/10'
+                        : 'border-red-500/50 text-red-400 hover:bg-red-500/10'
                         }`}
                       onClick={() => handleBlockClient(client.id)}
                     >

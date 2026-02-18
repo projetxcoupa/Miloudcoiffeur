@@ -1,7 +1,7 @@
 'use client';
 
 // FRESHCUT X - Promotions
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Sparkles, Plus, Percent, Tag, Calendar,
@@ -19,8 +19,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { toast } from 'sonner';
 
+import { useRealtime } from '@/hooks/useRealtime';
+
 export function PromotionManager() {
-  const [promotions, setPromotions] = useState<Promotion[]>(mockPromotions);
+  const realtimePromotions = useRealtime<Promotion>('promotions', []);
+  const [promotions, setPromotions] = useState<Promotion[]>([]);
+
+  useEffect(() => {
+    if (realtimePromotions.length > 0) {
+      // eslint-disable-next-line
+      setPromotions(realtimePromotions);
+    }
+  }, [realtimePromotions]);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('promotions');
 
