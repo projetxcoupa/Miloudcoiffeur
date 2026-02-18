@@ -120,3 +120,4 @@ Retail inventory.
 - **Styling**: Tailwind CSS + Shadcn UI.
 - **State Management**: React Hooks + Context.
 - **Proposed Backend**: Node.js / PostgreSQL.
+# Miloudcoiffeur
