@@ -1,3 +1,5 @@
+'use client';
+
 // FRESHCUT X - Promotions
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -177,8 +179,8 @@ export function PromotionManager() {
                         <button
                           onClick={() => setFormData({ ...formData, discountType: 'percentage' })}
                           className={`flex-1 p-3 rounded-lg border transition-all ${formData.discountType === 'percentage'
-                              ? 'border-cyber-neon bg-cyber-neon/10'
-                              : 'border-white/10 hover:border-white/30'
+                            ? 'border-cyber-neon bg-cyber-neon/10'
+                            : 'border-white/10 hover:border-white/30'
                             }`}
                         >
                           <Percent className="w-4 h-4 mx-auto mb-1" />
@@ -187,8 +189,8 @@ export function PromotionManager() {
                         <button
                           onClick={() => setFormData({ ...formData, discountType: 'fixed' })}
                           className={`flex-1 p-3 rounded-lg border transition-all ${formData.discountType === 'fixed'
-                              ? 'border-cyber-neon bg-cyber-neon/10'
-                              : 'border-white/10 hover:border-white/30'
+                            ? 'border-cyber-neon bg-cyber-neon/10'
+                            : 'border-white/10 hover:border-white/30'
                             }`}
                         >
                           <Tag className="w-4 h-4 mx-auto mb-1" />
@@ -254,8 +256,8 @@ export function PromotionManager() {
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
                     <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${promo.discountType === 'percentage'
-                        ? 'bg-cyber-neon/20'
-                        : 'bg-cyber-cyan/20'
+                      ? 'bg-cyber-neon/20'
+                      : 'bg-cyber-cyan/20'
                       }`}>
                       {promo.discountType === 'percentage' ? (
                         <Percent className="w-6 h-6 text-cyber-neon" />
@@ -419,8 +421,8 @@ export function PromotionManager() {
                 ].map((campaign, index) => (
                   <div key={index} className="flex items-center gap-4 p-4 bg-cyber-dark/50 rounded-lg">
                     <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${campaign.type === 'sms' ? 'bg-blue-500/20' :
-                        campaign.type === 'push' ? 'bg-cyber-neon/20' :
-                          'bg-cyber-orange/20'
+                      campaign.type === 'push' ? 'bg-cyber-neon/20' :
+                        'bg-cyber-orange/20'
                       }`}>
                       {campaign.type === 'sms' ? <MessageSquare className="w-5 h-5 text-blue-400" /> :
                         campaign.type === 'push' ? <Bell className="w-5 h-5 text-cyber-neon" /> :

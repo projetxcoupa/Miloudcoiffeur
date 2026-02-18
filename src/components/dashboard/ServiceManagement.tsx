@@ -1,3 +1,5 @@
+'use client';
+
 // FRESHCUT X - Service CMS
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -236,8 +238,8 @@ export function ServiceManagement() {
                       key={color.value}
                       onClick={() => setFormData({ ...formData, color: color.value })}
                       className={`w-8 h-8 rounded-lg transition-all ${formData.color === color.value
-                          ? 'ring-2 ring-white scale-110'
-                          : 'hover:scale-105'
+                        ? 'ring-2 ring-white scale-110'
+                        : 'hover:scale-105'
                         }`}
                       style={{ backgroundColor: color.value }}
                       title={color.label}

@@ -1,3 +1,5 @@
+'use client';
+
 // FRESHCUT X - Analytics Pro
 import { useState } from 'react';
 import { motion } from 'framer-motion';

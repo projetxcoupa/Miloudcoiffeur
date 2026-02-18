@@ -1,3 +1,5 @@
+'use client';
+
 // FRESHCUT X - Barber Management
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -155,7 +157,7 @@ export function BarberManagement() {
                         </AvatarFallback>
                       </Avatar>
                       <span className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-cyber-gray ${barber.status === 'active' ? 'bg-cyber-neon' :
-                          barber.status === 'pause' ? 'bg-yellow-400' : 'bg-gray-400'
+                        barber.status === 'pause' ? 'bg-yellow-400' : 'bg-gray-400'
                         }`} />
                     </div>
                     <div>
@@ -370,8 +372,8 @@ export function BarberManagement() {
                         <Button
                           variant="outline"
                           className={`${barber.status === 'active'
-                              ? 'border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10'
-                              : 'border-cyber-neon/50 text-cyber-neon hover:bg-cyber-neon/10'
+                            ? 'border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10'
+                            : 'border-cyber-neon/50 text-cyber-neon hover:bg-cyber-neon/10'
                             }`}
                           onClick={() => handleStatusChange(barber.id, barber.status === 'active' ? 'pause' : 'active')}
                         >

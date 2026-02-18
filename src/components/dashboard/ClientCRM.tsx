@@ -1,8 +1,10 @@
+'use client';
+
 // FRESHCUT X - Client CRM
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, User, Phone, Mail, Calendar, DollarSign, 
+import {
+  Search, User, Phone, Mail, Calendar, DollarSign,
   Ban, MoreHorizontal, Plus, Download,
   Crown
 } from 'lucide-react';
@@ -25,17 +27,17 @@ export function ClientCRM() {
   const [filter, setFilter] = useState<'all' | 'vip' | 'blocked' | 'new'>('all');
 
   const filteredClients = clients.filter(client => {
-    const matchesSearch = 
+    const matchesSearch =
       client.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       client.phone.includes(searchQuery) ||
       client.email?.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    const matchesFilter = 
+
+    const matchesFilter =
       filter === 'all' ? true :
-      filter === 'vip' ? client.isVip :
-      filter === 'blocked' ? client.isBlocked :
-      filter === 'new' ? client.totalVisits <= 3 : true;
-    
+        filter === 'vip' ? client.isVip :
+          filter === 'blocked' ? client.isBlocked :
+            filter === 'new' ? client.totalVisits <= 3 : true;
+
     return matchesSearch && matchesFilter;
   });
 
@@ -44,8 +46,8 @@ export function ClientCRM() {
       if (client.id === clientId) {
         const updated = { ...client, isBlocked: !client.isBlocked };
         toast.success(
-          updated.isBlocked 
-            ? `${client.name} a été bloqué` 
+          updated.isBlocked
+            ? `${client.name} a été bloqué`
             : `${client.name} a été débloqué`
         );
         return updated;
@@ -140,8 +142,8 @@ export function ClientCRM() {
               className="input-cyber pl-10 w-full sm:w-64"
             />
           </div>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             className="border-white/20 text-white hover:bg-white/10"
             onClick={handleExport}
           >
@@ -175,7 +177,7 @@ export function ClientCRM() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredClients.map((client) => {
           const tier = getLoyaltyTier(client.loyaltyScore);
-          
+
           return (
             <Dialog key={client.id}>
               <DialogTrigger asChild>
@@ -184,9 +186,8 @@ export function ClientCRM() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   whileHover={{ scale: 1.02 }}
-                  className={`glass-card p-4 cursor-pointer transition-all ${
-                    client.isBlocked ? 'opacity-50' : ''
-                  } ${client.isVip ? 'ring-1 ring-yellow-500/30' : ''}`}
+                  className={`glass-card p-4 cursor-pointer transition-all ${client.isBlocked ? 'opacity-50' : ''
+                    } ${client.isVip ? 'ring-1 ring-yellow-500/30' : ''}`}
                 >
                   <div className="flex items-start gap-4">
                     <Avatar className={`w-14 h-14 ${client.isVip ? 'ring-2 ring-yellow-500' : ''}`}>
@@ -219,13 +220,13 @@ export function ClientCRM() {
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent className="bg-cyber-gray border-white/10">
-                        <DropdownMenuItem 
+                        <DropdownMenuItem
                           className="text-white/70 hover:text-white focus:bg-white/10"
                         >
                           <User className="w-4 h-4 mr-2" />
                           Voir profil
                         </DropdownMenuItem>
-                        <DropdownMenuItem 
+                        <DropdownMenuItem
                           className={`${client.isBlocked ? 'text-green-400' : 'text-red-400'} focus:bg-white/10`}
                           onClick={(e) => {
                             e.stopPropagation();
@@ -336,13 +337,12 @@ export function ClientCRM() {
                       <Calendar className="w-4 h-4 mr-2" />
                       Prendre RDV
                     </Button>
-                    <Button 
-                      variant="outline" 
-                      className={`${
-                        client.isBlocked 
-                          ? 'border-green-500/50 text-green-400 hover:bg-green-500/10' 
+                    <Button
+                      variant="outline"
+                      className={`${client.isBlocked
+                          ? 'border-green-500/50 text-green-400 hover:bg-green-500/10'
                           : 'border-red-500/50 text-red-400 hover:bg-red-500/10'
-                      }`}
+                        }`}
                       onClick={() => handleBlockClient(client.id)}
                     >
                       <Ban className="w-4 h-4 mr-2" />

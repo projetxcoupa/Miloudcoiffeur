@@ -1,3 +1,5 @@
+'use client';
+
 // FRESHCUT X - Queue Management
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Reorder } from 'framer-motion';
