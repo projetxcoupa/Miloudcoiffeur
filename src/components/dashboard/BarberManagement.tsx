@@ -263,44 +263,32 @@ export function BarberManagement() {
 
                 <TabsContent value="stats" className="space-y-4 mt-4">
                   {/* Performance Cards */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <Card className="glass-card border-0">
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-cyber-neon/20 flex items-center justify-center">
-                            <DollarSign className="w-5 h-5 text-cyber-neon" />
-                          </div>
-                          <div>
-                            <p className="text-sm text-white/60">CA Total</p>
-                            <p className="text-xl font-bold text-white">{barber.stats.totalRevenue.toLocaleString()}€</p>
-                          </div>
+                      <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+                        <div className="w-10 h-10 rounded-lg bg-cyber-neon/20 flex items-center justify-center mb-2">
+                          <DollarSign className="w-5 h-5 text-cyber-neon" />
                         </div>
+                        <p className="text-sm text-white/60">CA Total</p>
+                        <p className="text-xl font-bold text-white">{barber.stats.totalRevenue.toLocaleString()}€</p>
                       </CardContent>
                     </Card>
                     <Card className="glass-card border-0">
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-cyber-cyan/20 flex items-center justify-center">
-                            <Users className="w-5 h-5 text-cyber-cyan" />
-                          </div>
-                          <div>
-                            <p className="text-sm text-white/60">Clients totals</p>
-                            <p className="text-xl font-bold text-white">{barber.stats.totalClients}</p>
-                          </div>
+                      <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+                        <div className="w-10 h-10 rounded-lg bg-cyber-cyan/20 flex items-center justify-center mb-2">
+                          <Users className="w-5 h-5 text-cyber-cyan" />
                         </div>
+                        <p className="text-sm text-white/60">Clients totals</p>
+                        <p className="text-xl font-bold text-white">{barber.stats.totalClients}</p>
                       </CardContent>
                     </Card>
                     <Card className="glass-card border-0">
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-cyber-orange/20 flex items-center justify-center">
-                            <Star className="w-5 h-5 text-cyber-orange" />
-                          </div>
-                          <div>
-                            <p className="text-sm text-white/60">Note moyenne</p>
-                            <p className="text-xl font-bold text-white">{barber.stats.rating}/5</p>
-                          </div>
+                      <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+                        <div className="w-10 h-10 rounded-lg bg-cyber-orange/20 flex items-center justify-center mb-2">
+                          <Star className="w-5 h-5 text-cyber-orange" />
                         </div>
+                        <p className="text-sm text-white/60">Note moyenne</p>
+                        <p className="text-xl font-bold text-white">{barber.stats.rating}/5</p>
                       </CardContent>
                     </Card>
                   </div>

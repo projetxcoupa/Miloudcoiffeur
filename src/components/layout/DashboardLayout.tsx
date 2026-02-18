@@ -90,7 +90,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 className={`fixed left-0 top-0 h-full z-50 overflow-hidden ${isMobile ? 'w-[280px]' : ''
                     }`}
             >
-                <div className="h-full bg-cyber-gray/90 backdrop-blur-xl border-r border-white/10 flex flex-col">
+                <div className="h-full bg-cyber-dark/80 backdrop-blur-xl border-r border-white/5 flex flex-col shadow-2xl">
                     {/* Logo */}
                     <div className="p-6">
                         <div className="flex items-center gap-3">
