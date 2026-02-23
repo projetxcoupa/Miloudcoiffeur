@@ -1,0 +1,24 @@
+{
+    "providers": [
+        {
+            "name": "Kimi",
+            "type": "openai-compatible",
+            "baseURL": "https://integrate.api.nvidia.com/v1/chat/completions",
+            "apiKey": "${Bearer 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}",
+            "models": [
+                {
+                    "id": "moonshotai/kimi-k2-instruct",
+                    "temperature": 0.5,
+                    "top_p": 0.9,
+                    "max_tokens": 4096
+                },
+                {
+                    "id": "moonshotai/kimi-k2.5",
+                    "temperature": 0.3,
+                    "top_p": 0.9,
+                    "max_tokens": 4096
+                }
+            ]
+        }
+    ]
+}

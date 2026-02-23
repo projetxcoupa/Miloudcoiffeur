@@ -1,0 +1,719 @@
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\build\chunks\83ae7_ba00bf2b._.js
+  5937:1   warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  6161:36  warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  6617:9   warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  6620:13  warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  6623:40  warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\build\chunks\[turbopack]_runtime.js
+    9:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  546:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  567:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  588:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\build\chunks\83ae7_ba00bf2b._.js
+  5946:1   warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  6173:25  warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  6179:36  warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  6642:9   warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  6645:13  warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  6648:40  warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\build\chunks\[turbopack]_runtime.js
+    9:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  546:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  567:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  588:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\chunks\ssr\83ae7_9792bdde._.js
+  1934:5  error  Definition for rule 'react-hooks/rules-of-hooks' was not found         react-hooks/rules-of-hooks
+  4759:9  error  Definition for rule 'react-hooks/rules-of-hooks' was not found         react-hooks/rules-of-hooks
+  5204:1  error  Definition for rule 'import/no-extraneous-dependencies' was not found  import/no-extraneous-dependencies
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\chunks\ssr\83ae7_@supabase_auth-js_dist_module_9ff22552._.js
+   601:9   error  Definition for rule '@typescript-eslint/no-extra-semi' was not found   @typescript-eslint/no-extra-semi
+   604:13  error  Definition for rule '@typescript-eslint/no-extra-semi' was not found   @typescript-eslint/no-extra-semi
+   642:9   error  Definition for rule '@typescript-eslint/no-extra-semi' was not found   @typescript-eslint/no-extra-semi
+  1925:1   error  Definition for rule '@typescript-eslint/ban-ts-comment' was not found  @typescript-eslint/ban-ts-comment
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\chunks\ssr\83ae7_framer-motion_dist_es_e8300bdd._.js
+  3204:5  error  Definition for rule 'react-hooks/exhaustive-deps' was not found  react-hooks/exhaustive-deps
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\chunks\ssr\83ae7_motion-dom_dist_es_2ac1bc16._.js
+  836:35  error  Definition for rule 'redos-detector/no-unsafe-regex' was not found  redos-detector/no-unsafe-regex
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\chunks\ssr\83ae7_next_ce6b0530._.js
+   3305:9   error    Definition for rule 'react-hooks/rules-of-hooks' was not found                       react-hooks/rules-of-hooks
+  11090:17  warning  Unused eslint-disable directive (no problems were reported from 'no-control-regex')
+  11098:17  warning  Unused eslint-disable directive (no problems were reported from 'no-control-regex')
+  11443:9   warning  Unused eslint-disable directive (no problems were reported from 'default-case')
+  13541:13  warning  Unused eslint-disable directive (no problems were reported from 'no-self-assign')
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\chunks\ssr\83ae7_next_dist_118cef67._.js
+   6933:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+   7475:1    error    Definition for rule '@typescript-eslint/no-unused-vars' was not found                    @typescript-eslint/no-unused-vars
+  14748:1    error    Definition for rule '@next/internal/no-ambiguous-jsx' was not found                      @next/internal/no-ambiguous-jsx
+  14749:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+  14751:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+  16239:81   warning  Unused eslint-disable directive (no problems were reported from 'eqeqeq')
+  16242:55   warning  Unused eslint-disable directive (no problems were reported from 'eqeqeq')
+  16639:179  warning  Unused eslint-disable directive (no problems were reported from 'no-restricted-syntax')
+  16846:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+  16848:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\chunks\ssr\83ae7_next_dist_8c0ed347._.js
+   6913:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+   7455:1    error    Definition for rule '@typescript-eslint/no-unused-vars' was not found                    @typescript-eslint/no-unused-vars
+  14728:1    error    Definition for rule '@next/internal/no-ambiguous-jsx' was not found                      @next/internal/no-ambiguous-jsx
+  14729:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+  14731:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+  16219:81   warning  Unused eslint-disable directive (no problems were reported from 'eqeqeq')
+  16222:55   warning  Unused eslint-disable directive (no problems were reported from 'eqeqeq')
+  16619:179  warning  Unused eslint-disable directive (no problems were reported from 'no-restricted-syntax')
+  16826:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+  16828:1    error    Definition for rule 'import/no-extraneous-dependencies' was not found                    import/no-extraneous-dependencies
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\chunks\ssr\83ae7_next_dist_c41429b1._.js
+   228:5  error  Definition for rule 'react-hooks/rules-of-hooks' was not found         react-hooks/rules-of-hooks
+  3053:9  error  Definition for rule 'react-hooks/rules-of-hooks' was not found         react-hooks/rules-of-hooks
+  3498:1  error  Definition for rule 'import/no-extraneous-dependencies' was not found  import/no-extraneous-dependencies
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\chunks\ssr\[turbopack]_runtime.js
+    9:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  546:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  567:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  588:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\edge\chunks\83ae7_@supabase_auth-js_dist_module_2b9723fb._.js
+   601:9   error  Definition for rule '@typescript-eslint/no-extra-semi' was not found   @typescript-eslint/no-extra-semi
+   604:13  error  Definition for rule '@typescript-eslint/no-extra-semi' was not found   @typescript-eslint/no-extra-semi
+   642:9   error  Definition for rule '@typescript-eslint/no-extra-semi' was not found   @typescript-eslint/no-extra-semi
+  1925:1   error  Definition for rule '@typescript-eslint/ban-ts-comment' was not found  @typescript-eslint/ban-ts-comment
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\edge\chunks\f0a72_next_dist_esm_build_templates_edge-wrapper_13e670e3.js
+    19:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+   521:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+   752:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  1642:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  1751:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\edge\chunks\f0a72_next_dist_esm_build_templates_edge-wrapper_64d8ad5f.js
+    19:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+   521:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+   752:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  1642:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  1751:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\server\edge\chunks\f0a72_next_dist_esm_build_templates_edge-wrapper_9a609d6d.js
+    19:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+   521:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+   752:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  1642:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  1751:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\static\chunks\83ae7_@supabase_auth-js_dist_module_cfcabcb2._.js
+   622:9   error  Definition for rule '@typescript-eslint/no-extra-semi' was not found   @typescript-eslint/no-extra-semi
+   625:13  error  Definition for rule '@typescript-eslint/no-extra-semi' was not found   @typescript-eslint/no-extra-semi
+   663:9   error  Definition for rule '@typescript-eslint/no-extra-semi' was not found   @typescript-eslint/no-extra-semi
+  1946:1   error  Definition for rule '@typescript-eslint/ban-ts-comment' was not found  @typescript-eslint/ban-ts-comment
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\static\chunks\83ae7_framer-motion_dist_es_8ddb7d74._.js
+  3230:5  error  Definition for rule 'react-hooks/exhaustive-deps' was not found  react-hooks/exhaustive-deps
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\static\chunks\83ae7_motion-dom_dist_es_d9671c4a._.js
+  836:35  error  Definition for rule 'redos-detector/no-unsafe-regex' was not found  redos-detector/no-unsafe-regex
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\static\chunks\83ae7_next_833c962f._.js
+  2917:17  warning  Unused eslint-disable directive (no problems were reported from 'no-control-regex')
+  2925:17  warning  Unused eslint-disable directive (no problems were reported from 'no-control-regex')
+  3311:9   warning  Unused eslint-disable directive (no problems were reported from 'default-case')
+  5448:13  warning  Unused eslint-disable directive (no problems were reported from 'no-self-assign')
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\static\chunks\83ae7_next_dist_0590f759._.js
+  1517:5  error  Definition for rule '@next/internal/typechecked-require' was not found  @next/internal/typechecked-require
+  3517:9  error  Definition for rule 'react-hooks/rules-of-hooks' was not found          react-hooks/rules-of-hooks
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\static\chunks\83ae7_next_dist_client_214dd7fb._.js
+    877:5  error  Definition for rule 'react-hooks/rules-of-hooks' was not found          react-hooks/rules-of-hooks
+   1485:9  error  Definition for rule 'react-hooks/rules-of-hooks' was not found          react-hooks/rules-of-hooks
+  11759:9  error  Definition for rule 'react-hooks/rules-of-hooks' was not found          react-hooks/rules-of-hooks
+  11923:9  error  Definition for rule 'react-hooks/rules-of-hooks' was not found          react-hooks/rules-of-hooks
+  12700:1  error  Definition for rule '@next/internal/typechecked-require' was not found  @next/internal/typechecked-require
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\static\chunks\83ae7_next_dist_compiled_3b0aef2d._.js
+  686:35  warning  Unused eslint-disable directive (no problems were reported from 'no-proto')
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\static\chunks\turbopack-Desktop_COIF FIAL_Kimi_Agent_FRESHCUT X Cyberpunk Barber_app_81bca94e._.js
+    19:5  error    Definition for rule '@typescript-eslint/no-unused-vars' was not found       @typescript-eslint/no-unused-vars
+   521:5  error    Definition for rule '@typescript-eslint/no-unused-vars' was not found       @typescript-eslint/no-unused-vars
+   752:5  error    Definition for rule '@typescript-eslint/no-unused-vars' was not found       @typescript-eslint/no-unused-vars
+  1601:5  error    Definition for rule '@typescript-eslint/no-unused-vars' was not found       @typescript-eslint/no-unused-vars
+  1763:5  error    Definition for rule '@typescript-eslint/no-unused-vars' was not found       @typescript-eslint/no-unused-vars
+  1848:5  warning  Unused eslint-disable directive (no problems were reported from 'no-eval')
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\types\routes.d.ts
+  13:8   error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  14:12  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  15:17  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  16:27  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  17:30  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  18:25  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  19:25  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  21:26  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  22:28  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  23:23  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  24:26  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  25:26  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  26:13  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\dev\types\validator.ts
+    9:71   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+    9:126  warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   10:74   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   10:83   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   12:51   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   14:16   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   14:23   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   16:51   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   18:16   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   18:23   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   19:14   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   20:14   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   25:74   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   25:83   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   27:51   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   29:16   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   29:23   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   31:51   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   33:16   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   33:23   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   34:14   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   35:14   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   42:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   44:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   45:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   51:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   53:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   54:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   60:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   62:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   63:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   69:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   71:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   72:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   78:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   80:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   81:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   87:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   89:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   90:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   96:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   98:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   99:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  105:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  107:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  108:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  114:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  116:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  117:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  123:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  125:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  126:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  132:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  134:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  135:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  141:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  143:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  144:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  150:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  152:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  153:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  159:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  161:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  162:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  174:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  176:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  177:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  183:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  185:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  186:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\server\chunks\ssr\[turbopack]_runtime.js
+    9:5  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  546:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  567:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+  588:1  error  Definition for rule '@typescript-eslint/no-unused-vars' was not found  @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\types\routes.d.ts
+  13:8   error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  14:12  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  15:17  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  16:27  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  17:30  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  18:25  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  19:25  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  21:26  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  22:28  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  23:23  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  24:26  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  25:26  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+  26:13  error  The `{}` ("empty object") type allows any non-nullish value, including literals like `0` and `""`.
+- If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+- If you want a type meaning "any object", you probably want `object` instead.
+- If you want a type meaning "any value", you probably want `unknown` instead  @typescript-eslint/no-empty-object-type
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\.next\types\validator.ts
+    9:71   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+    9:126  warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   10:74   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   10:83   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   12:51   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   14:16   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   14:23   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   16:51   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   18:16   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   18:23   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   19:14   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   20:14   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   25:74   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   25:83   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   27:51   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   29:16   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   29:23   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   31:51   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   33:16   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   33:23   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   34:14   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   35:14   warning  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+   42:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   44:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   45:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   51:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   53:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   54:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   60:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   62:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   63:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   69:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   71:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   72:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   78:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   80:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   81:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   87:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   89:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   90:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+   96:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+   98:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+   99:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  105:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  107:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  108:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  114:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  116:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  117:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  123:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  125:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  126:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  132:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  134:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  135:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  141:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  143:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  144:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  150:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  152:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  153:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  159:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  161:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  162:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  174:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  176:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  177:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+  183:9    warning  'handler' is assigned a value but only used as a type                                                                @typescript-eslint/no-unused-vars
+  185:3    error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  186:8    warning  '__Unused' is defined but never used                                                                                 @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\app\dashboard\clients\[id]\page.tsx
+  7:44  warning  'CreditCard' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\app\layout.tsx
+  17:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\booking\BookingFlowClient.tsx
+   31:11  warning  'queue' is assigned a value but never used    @typescript-eslint/no-unused-vars
+   42:32  warning  Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+   98:25  warning  Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+  118:95  warning  Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+  222:17  error    Unexpected lexical declaration in case block  no-case-declarations
+  415:49  warning  Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\AnalyticsDashboard.tsx
+  68:23  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\AnalyticsDashboard.tsx:68:23
+  66 |   const serviceData = mockServices.map((service, index) => ({
+  67 |     name: service.name,
+> 68 |     value: Math.floor(Math.random() * 100) + 50,
+     |                       ^^^^^^^^^^^^^ Cannot call impure function
+  69 |     color: service.color || COLORS[index % COLORS.length],
+  70 |   }));
+  71 |  react-hooks/purity
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\BarberManagement.tsx
+  12:10  warning  'mockBarbers' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+  31:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\BarberManagement.tsx:31:7
+  29 |   useEffect(() => {
+  30 |     if (realtimeBarbers.length > 0) {
+> 31 |       setBarbers(realtimeBarbers);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |     }
+  33 |   }, [realtimeBarbers]);
+  34 |   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);  react-hooks/set-state-in-effect
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\ClientCRM.tsx
+  12:10  warning  'mockClients' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+  32:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\ClientCRM.tsx:32:7
+  30 |   useEffect(() => {
+  31 |     if (realtimeClients.length > 0) {
+> 32 |       setClients(realtimeClients);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  33 |     }
+  34 |   }, [realtimeClients]);
+  35 |   const [searchQuery, setSearchQuery] = useState('');  react-hooks/set-state-in-effect
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\DashboardOverview.tsx
+  94:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\DashboardOverview.tsx:94:9
+  92 |             .reduce((acc, a) => acc + a.totalPrice, 0);
+  93 |
+> 94 |         setLiveRevenue(mockAnalytics.revenue.daily + todayRevenue);
+     |         ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  95 |         setLiveClients(mockAnalytics.clients.today + appointments.length);
+  96 |     }, [appointments]);
+  97 |  react-hooks/set-state-in-effect
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\ProductManagement.tsx
+  12:10  warning  'mockProducts' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+  28:13  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\ProductManagement.tsx:28:13
+  26 |     useEffect(() => {
+  27 |         if (realtimeProducts.length > 0) {
+> 28 |             setProducts(realtimeProducts);
+     |             ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  29 |         }
+  30 |     }, [realtimeProducts]);
+  31 |     const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);  react-hooks/set-state-in-effect
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\PromotionManager.tsx
+  12:10  warning  'mockPromotions' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+  30:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\PromotionManager.tsx:30:7
+  28 |   useEffect(() => {
+  29 |     if (realtimePromotions.length > 0) {
+> 30 |       setPromotions(realtimePromotions);
+     |       ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  31 |     }
+  32 |   }, [realtimePromotions]);
+  33 |   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);  react-hooks/set-state-in-effect
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\QueueManagement.tsx
+  118:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\Reservations.tsx
+  12:10  warning  'mockAppointments' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+  35:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\Reservations.tsx:35:7
+  33 |   useEffect(() => {
+  34 |     if (realtimeAppointments.length > 0) {
+> 35 |       setAppointments(realtimeAppointments);
+     |       ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  36 |     }
+  37 |   }, [realtimeAppointments]);
+  38 |  react-hooks/set-state-in-effect
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\ServiceManagement.tsx
+  12:10  warning  'mockServices' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+  40:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\ServiceManagement.tsx:40:7
+  38 |   useEffect(() => {
+  39 |     if (realtimeServices.length > 0) {
+> 40 |       setServices(realtimeServices);
+     |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  41 |     }
+  42 |   }, [realtimeServices]);
+  43 |   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);  react-hooks/set-state-in-effect
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\dashboard\ShopSettings.tsx
+    4:10  warning  'motion' is defined but never used        @typescript-eslint/no-unused-vars
+    6:19  warning  'MapPin' is defined but never used        @typescript-eslint/no-unused-vars
+    6:27  warning  'Phone' is defined but never used         @typescript-eslint/no-unused-vars
+    7:19  warning  'Info' is defined but never used          @typescript-eslint/no-unused-vars
+    7:25  warning  'Zap' is defined but never used           @typescript-eslint/no-unused-vars
+   16:10  warning  'Badge' is defined but never used         @typescript-eslint/no-unused-vars
+   20:59  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   55:25  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   75:25  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  112:79  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\landing\LandingPageClient.tsx
+  22:11  warning  'onStartBooking' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  25:59  warning  Unexpected any. Specify a different type             @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\layout\DashboardLayout.tsx
+   8:38  warning  'Smartphone' is defined but never used    @typescript-eslint/no-unused-vars
+  42:59  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\ui\WheelDateTimePicker.tsx
+  38:8  warning  React Hook useEffect has missing dependencies: 'dates' and 'times'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\ui\badge.tsx
+  46:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\components\ui\button.tsx
+  62:18  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\hooks\useRealtime.test.ts
+  15:22  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  16:21  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  29:30  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_client\BookingFlow.tsx
+   13:10  warning  'format' is defined but never used                  @typescript-eslint/no-unused-vars
+   14:10  warning  'fr' is defined but never used                      @typescript-eslint/no-unused-vars
+   27:11  warning  'queue' is assigned a value but never used          @typescript-eslint/no-unused-vars
+   38:32  warning  Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+   50:11  warning  'totalDuration' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   95:25  warning  Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  115:95  warning  Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+  212:17  error    Unexpected lexical declaration in case block        no-case-declarations
+  405:49  warning  Unexpected any. Specify a different type            @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_client\LandingPage.tsx
+  21:59  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_components\ui\WheelDateTimePicker.tsx
+   1:36  warning  'useState' is defined but never used                                                                                                     @typescript-eslint/no-unused-vars
+  38:8   warning  React Hook useEffect has missing dependencies: 'date', 'dates', 'time', and 'times'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_components\ui\badge.tsx
+  46:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_components\ui\button-group.tsx
+  82:3  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_components\ui\button.tsx
+  62:18  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_components\ui\form.tsx
+  159:3  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_components\ui\navigation-menu.tsx
+  167:3  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_components\ui\sidebar.tsx
+  611:26  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_components\ui\sidebar.tsx:611:26
+  609 |   // Random width between 50 to 90%.
+  610 |   const width = React.useMemo(() => {
+> 611 |     return `${Math.floor(Math.random() * 40) + 50}%`
+      |                          ^^^^^^^^^^^^^ Cannot call impure function
+  612 |   }, [])
+  613 |
+  614 |   return (  react-hooks/purity
+  725:3   warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_components\ui\toggle.tsx
+  45:18  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_lib\supabaseClient.ts
+  15:23  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  25:58  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  29:46  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  38:55  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_sections\AnalyticsPro.tsx
+  66:23  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_sections\AnalyticsPro.tsx:66:23
+  64 |   const serviceData = mockServices.map((service, index) => ({
+  65 |     name: service.name,
+> 66 |     value: Math.floor(Math.random() * 100) + 50,
+     |                       ^^^^^^^^^^^^^ Cannot call impure function
+  67 |     color: service.color || COLORS[index % COLORS.length],
+  68 |   }));
+  69 |  react-hooks/purity
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_sections\DashboardOverview.tsx
+  96:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_sections\DashboardOverview.tsx:96:5
+  94 |       .reduce((acc, a) => acc + a.totalPrice, 0);
+  95 |
+> 96 |     setLiveRevenue(mockAnalytics.revenue.daily + todayRevenue);
+     |     ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  97 |     setLiveClients(mockAnalytics.clients.today + appointments.length);
+  98 |   }, [appointments]);
+  99 |  react-hooks/set-state-in-effect
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\old_sections\QueueManagement.tsx
+  116:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\sw.js
+  5:9  error  Parsing error: Unexpected token let
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\utils\supabase\client.ts
+  12:32  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  28:59  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  57:62  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  60:50  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\utils\supabase\server.ts
+  16:32  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\lenovo\Desktop\COIF FIAL\Kimi_Agent_FRESHCUT X Cyberpunk Barber\app\src\utils\supabase\session.ts
+  6:9  error  'response' is never reassigned. Use 'const' instead  prefer-const
+
+✖ 350 problems (153 errors, 197 warnings)
+  1 error and 27 warnings potentially fixable with the `--fix` option.
+

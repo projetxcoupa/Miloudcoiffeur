@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FreshCut X - Visual Script</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css"
+        rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="markdown-body">
+    <div id="content"></div>
+
+    <!-- Hidden element containing the raw markdown -->
+    <script type="text/markdown" id="raw-md">
+# FRESHCUT X - Visual Script & Architecture
+
+## 🗺️ High-Level Sitemap
+
+The application uses **Next.js App Router** for the main entry points, but relies heavily on client-side state in `App.tsx` for the Admin Dashboard interface.
+
+```mermaid
+graph TD
+    A[Entry: /] --> B{Role/Route}
+    B -- Visitor --> C[Landing Page]
+    B -- Client --> D[Booking Flow]
+    B -- Admin --> E[Login Page]
+    
+    E -->|Auth Success| F[Admin Dashboard]
+    F --> G{Dashboard Views}
+    G --> H[Overview]
+    G --> I[Queue Management]
+    G --> J[Reservations]
+    G --> K[CRM / Clients]
+    G --> L[Barbers]
+    G --> M[Services & Products]
+    G --> N[Analytics]
+    G --> O[Promotions]
+    G --> P[Settings]
+
+    C -->|Click 'Réserver'| D
+    D -->|Complete| Q[Confirmation]
+```
+
+---
+
+## 🚦 User Flows
+
+### 1. Client Journey (External)
+**Entry**: `src/app/page.tsx` -> `LandingPageClient` or `src/app/book/page.tsx` -> `BookingFlowClient`
+
+1.  **Landing Page**:
+    *   **Hero Section**: Shop status (Open/Closed), "Réserver" CTA.
+    *   **Services**: List of cuts and prices.
+    *   **Barbers**: Team profiles.
+    *   **Map/Footer**: Location and contact.
+2.  **Booking Flow**:
+    *   **Select Service**: Choose Haircut, Beard, etc.
+    *   **Select Barber**: "Any Professional" or specific barber.
+    *   **Select Time**: Date & Time picker (Wheel picker style).
+    *   **Details**: Name, Phone number.
+    *   **Confirmation**: Summary and success message.
+
+### 2. Admin Journey (Internal)
+**Entry**: `src/app/dashboard/page.tsx` or `src/App.tsx` (Legacy/SPA mode)
+
+1.  **Login**: `src/app/login/page.tsx`
+    *   Mock Auth: `password: admin123`
+    *   Sets cookie `admin-session`.
+2.  **Dashboard Layout** (`src/App.tsx`):
+    *   **Sidebar**: Persistent navigation (Dashboard, File d'attente, etc.).
+    *   **Header**: Shop status toggle, Notifications, Settings.
+3.  **Key Views**:
+    *   **Queue**: Real-time waiting list management (Add/Remove/Notify).
+    *   **Reservations**: Calendar view of appointments.
+    *   **Analytics**: KPI charts (Revenue, Visits).
+
+---
+
+## 🧩 Component Hierarchy
+
+```mermaid
+classDiagram
+    class App_Router {
+        / (page.tsx)
+        /book (page.tsx)
+        /login (page.tsx)
+        /dashboard (page.tsx)
+    }
+
+    class Client_Components {
+        LandingPage
+        BookingFlow
+        BookingSteps
+        ServiceSelection
+        BarberSelection
+        TimeSlotPicker
+    }
+
+    class Admin_Components {
+        App.tsx (Main Layout)
+        Sidebar
+        Header
+        DashboardOverview
+        QueueManagement
+        Reservations
+        ClientCRM
+        BarberManagement
+    }
+
+    App_Router --> Client_Components
+    App_Router --> Admin_Components
+```
+
+---
+
+## 💾 Database Schema (ERD)
+
+Based on Supabase PostgreSQL Schema.
+
+```mermaid
+erDiagram
+    SHOPS ||--o{ USERS : employs
+    SHOPS ||--o{ BARBERS : manages
+    SHOPS ||--o{ CLIENTS : serves
+    SHOPS ||--o{ SERVICES : offers
+    SHOPS ||--o{ PRODUCTS : sells
+    SHOPS ||--o{ PROMOTIONS : runs
+    
+    CLIENTS ||--o{ APPOINTMENTS : books
+    BARBERS ||--o{ APPOINTMENTS : performs
+    APPOINTMENTS ||--|{ APPOINTMENT_SERVICES : includes
+    SERVICES ||--|{ APPOINTMENT_SERVICES : part_of
+
+    CLIENTS ||--o{ QUEUE_ITEMS : joins
+    BARBERS ||--o{ QUEUE_ITEMS : handles
+    QUEUE_ITEMS ||--|{ QUEUE_SERVICES : includes
+    SERVICES ||--|{ QUEUE_SERVICES : part_of
+
+    SHOPS {
+        uuid id PK
+        string name
+        enum plan
+        boolean isOpen
+    }
+    USERS {
+        uuid id PK
+        uuid shopId FK
+        string role
+        string email
+    }
+    BARBERS {
+        uuid id PK
+        uuid shopId FK
+        string name
+        enum status
+        jsonb schedule
+    }
+    CLIENTS {
+        uuid id PK
+        uuid shopId FK
+        string name
+        string phone
+        int loyaltyScore
+    }
+    SERVICES {
+        uuid id PK
+        uuid shopId FK
+        string name
+        decimal price
+        int duration
+    }
+    APPOINTMENTS {
+        uuid id PK
+        uuid clientId FK
+        uuid barberId FK
+        timestamp startTime
+        enum status
+        decimal totalPrice
+    }
+    QUEUE_ITEMS {
+        uuid id PK
+        uuid clientId FK
+        uuid barberId FK
+        int position
+        enum status
+        int estimatedWaitTime
+    }
+```
+
+---
+
+## 🔐 User Roles & Permissions
+
+The application defines three primary roles for internal users (`users` table):
+
+| Role | Access Level | Responsibilities |
+| :--- | :--- | :--- |
+| **Super Admin** | **Full Access** | Can manage shop settings, manage other users, view financial analytics, create promotions, and edit all data. |
+| **Manager** | **High Access** | Can manage the active queue, appointments, clients, and inventory. Restricted from shop-wide settings and sensitive financial data (optional). |
+| **Barber** | **Limited Access** | focus on their own schedule and queue. Can view their own intuitive dashboard, mark queue items as "In Progress" or "Done". |
+
+**Client Access:**
+*   **Public**: Landing page, Booking flow.
+*   **Authentication**: Typically phone-number based (OTP) or simple checkout flow (Guest).
+
+---
+
+## ⚙️ Business Rules & Logic
+
+### 1. Queue Management System
+*   **Waiting**: Default status when a client joins the walk-in queue.
+*   **Notified**: Staff clicks "Notify" -> SMS/Notification sent to client (approx. 10-15 mins before turn).
+*   **In Progress**: Client is in the chair. Timer starts for service duration.
+*   **Done**: Service complete. Payment processed. Staff must select payment method (`cash`, `card`).
+*   **No Show/Cancelled**: Client removed from queue. Recorded in history.
+
+### 2. Appointment Logic
+*   **Conflicts**: Double bookings are prevented by checking `startTime` and `duration` against existing appointments for the selected `barberId`.
+*   **Buffer Time**: Optional buffer (e.g., 5 mins) between appointments for cleaning.
+*   **Status Flow**: `scheduled` -> `confirmed` (optional manual approval) -> `in_progress` -> `completed`.
+
+### 3. Financials & Commissions
+*   **Commission Rate**: Each barber has a `commissionRate` (e.g., 40%).
+*   **Revenue Calculation**: `Barber Revenue = Total Service Price * (Commission Rate / 100)`.
+*   **Shop Share**: Remainder of the service price.
+*   **Product Sales**: Typically 100% to shop, or separate commission structure.
+
+### 4. Loyalty & VIP System
+*   **Loyalty Score**: Points accumulated per visit or per dollar spent.
+*   **VIP Flag**: `isVip` boolean usually triggered by `TotalVisits > X` or `TotalSpent > Y` (or manual override).
+*   **Blocked**: `isBlocked` prevents a specific phone number from making new bookings (for repeated no-shows).
+
+### 5. Barber Availability
+*   **Status**: `active` (Available for booking), `pause` (Temporary break, no new queue additions), `off` (Clocked out).
+*   **Schedule**: JSON object defining specific working hours per day (e.g., `{ "monday": { "start": "09:00", "end": "19:00", "isWorking": true } }`).
+
+---
+
+## 🖥️ Detailed UI/UX Breakdown
+
+### 1. Landing Page (`src/components/landing/LandingPageClient.tsx`)
+A high-conversion marketing page with a premium "Cyberpunk" aesthetic.
+
+*   **Navbar**:
+    *   Sticky header with glassmorphism effect.
+    *   Logo: "Miloud Coiffeur" with neon accent.
+    *   Links: Services, Produits, À Propos, Contact.
+    *   **CTA Button**: "RÉSERVER" (Neon style).
+    *   Mobile: Hamburger menu opening a full-screen drawer.
+*   **Hero Section**:
+    *   **Live Status Badge**: Pulsing indicator showing "OPEN", "PAUSE", or "CLOSED".
+    *   **Headline**: Large, impactful typography ("Dominez votre style").
+    *   **Subtext**: Value proposition emphasizing speed and precision.
+    *   **Primary CTA**: "Prendre un rendez-vous" button.
+*   **Services Grid**:
+    *   3-Column Layout: Coupes (Hair), Barbe (Beard), Soins (Care).
+    *   Each item shows: Name, Price, and Brief Description.
+    *   Interactive hover states highlighting the selected service.
+*   **Gallery (Marquee)**:
+    *   Infinite horizontal scroll of high-quality cuts.
+    *   Hover effect: Pauses scroll, zooms image, reveals category (e.g., "Précision", "Style").
+*   **Products Preview**:
+    *   Grid of top 4 selling items.
+    *   Quick "View Details" overlay on hover.
+*   **Footer**:
+    *   Simple layout with copyright, legal links, and social icons.
+    *   Embedded Google Maps placeholder.
+
+### 2. Booking Flow (`src/components/booking/BookingFlowClient.tsx`)
+A step-by-step wizard optimized for mobile users.
+
+*   **Progress Bar**: Neon line at the top indicating completion percentage.
+*   **Step 1: Age Selection**:
+    *   Large cards for "Adulte" vs "Enfant".
+    *   Visual icons (User vs Heart) to quickly differentiate.
+*   **Step 2: Service Selection**:
+    *   Multi-select list.
+    *   Each row shows: Name, Duration, Price, and Checkmark if selected.
+    *   Total price updates in real-time.
+*   **Step 3: Barber Selection**:
+    *   "Any Professional" option (emphasized for speed).
+    *   List of specific barbers with Avatars, Names, and Ratings (e.g., "4.9/5").
+*   **Step 4: Booking Type**:
+    *   **Live Queue (Waitlist)**: Shows current estimated wait time (e.g., "~25 MIN").
+    *   **Future Booking (Fixed)**: Reveals a custom **Wheel Picker** for Date & Time selection (iOS style).
+*   **Step 5: Contact Details**:
+    *   Simple form: Name and Phone Number (10 digits).
+    *   Order Recap: Summary of services, barber, and total price.
+*   **Step 6: Success & Confirmation**:
+    *   Big "Check Circle" animation.
+    *   **Dynamic Counts**: Shows "Appointment Time" or "Time Remaining".
+    *   **Push Notification Permission**: Button to enable browser notifications for queue updates.
+
+### 3. Admin Dashboard (`src/components/dashboard/DashboardOverview.tsx`)
+The command center for shop staff.
+
+*   **Header**:
+    *   Welcome Message: "Bonjour, [Barber Name]".
+    *   System Status: "En ligne" indicator.
+    *   Quick stats summary in text format.
+*   **KPI Grid (Top Row)**:
+    *   **Revenue**: Daily total vs Yesterday (with trend arrow).
+    *   **Clients**: Count of today's visits.
+    *   **Queue**: Current size and average wait time.
+    *   **Appointments**: Number of upcoming scheduled bookings.
+*   **Main Content Area**:
+    *   **Live Queue Widget**:
+        *   List of active queue items.
+        *   Status badges: `WAITING` (Yellow), `NOTIFIED` (Blue), `IN_PROGRESS` (Neon).
+        *   Shows Client Name, Service, and Assigned Barber.
+    *   **Next Appointment Card**:
+        *   Highlight of the immediate next booking.
+        *   Client Avatar, Time, and Services.
+    *   **Barber Performance**:
+        *   Mini-leaderboard showing clients served per barber today.
+        *   Progress bars for visual comparison.
+*   **Charts Section**:
+    *   **Revenue Trend**: Area chart (Gradient Green) showing last 30 days.
+    *   **Daily Traffic**: Bar chart (Blue) showing clients per day.
+*   **Quick Actions Toolbar** (Bottom/Side):
+    *   Buttons for common tasks: "New Client" (Walk-in), "New Reservation", "Add to Queue", "Close Register".
+
+---
+
+## 🎨 Visual Style Guide (Cyberpunk Theme)
+
+*   **Core Colors**:
+    *   Background: `bg-cyber-dark` (Dark Blue/Black)
+    *   Primary Accent: `text-cyber-neon` (Neon Cyan/Green)
+    *   Secondary Accent: `text-cyber-orange` (Bright Orange)
+    *   Glassmorphism: `glass-card`, `backdrop-blur`
+*   **Typography**:
+    *   Headings: Uppercase, Bold, Wide tracking.
+    *   Body: Sans-serif, clean.
+*   **UI Elements**:
+    *   **Buttons**: `btn-neon` (Glow effects).
+    *   **Cards**: Semi-transparent backgrounds with thin borders.
+    *   **Icons**: Lucide React icons.
+
+## 📱 Responsive Logic
+
+*   **Desktop**: Full sidebar, Grid layouts.
+*   **Mobile**: 
+    *   Hidden Sidebar (Hamburger menu).
+    *   Stack layouts.
+    *   Bottom sheets for actions (likely using Vaul drawers).
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const rawMd = document.getElementById('raw-md').textContent;
+            const contentDiv = document.getElementById('content');
+
+            // Configure marked
+            marked.setOptions({
+                highlight: function (code, lang) {
+                    return code;
+                }
+            });
+
+            // Parse Markdown
+            contentDiv.innerHTML = marked.parse(rawMd);
+
+            // Initialize Mermaid
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'default',
+                securityLevel: 'loose',
+            });
+
+            // Find mermaid code blocks and process them
+            const codeBlocks = document.querySelectorAll('pre code.language-mermaid');
+            codeBlocks.forEach((block, index) => {
+                const pre = block.parentElement;
+                const mermaidDiv = document.createElement('div');
+                mermaidDiv.className = 'mermaid';
+                mermaidDiv.textContent = block.textContent;
+                pre.replaceWith(mermaidDiv);
+            });
+
+            // Trigger mermaid rendering
+            mermaid.run();
+        });
+    </script>
+</body>
+
+</html>
